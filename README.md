@@ -36,11 +36,11 @@ This will output the TXIDs and witness data for the A'→B' and B'→C' transact
   2.	For Segwit: ./btcdeb '[<signature> <publicKey>] [OP_DUP OP_HASH160 <pubKeyHash> OP_EQUALVERIFY OP_CHECKSIG]' 
   Validated the transition where the transaction commits to a script hash (P2SH), which then triggers the execution of the Segregated Witness data containing the signatures. The ‘step’ and ‘stack’ command is used to observe the stack at each step.
 
-##**Comparative Analysis**
+##**Comparative Analysis**\n
 Based on the data gathered during execution:
 •	Transaction Size: SegWit transactions utilized virtual bytes (vbytes), resulting in a smaller footprint compared to Legacy P2PKH bytes.
 •	Structure: Legacy transactions store signature data within the scriptSig, whereas SegWit separates this into a dedicated witness field, reducing fees and preventing transaction malleability.
 
-##**Conclusion**
+##**Conclusion**\n
 This lab successfully demonstrated the creation, signing, and broadcasting of transactions across two different Bitcoin address standards. By analyzing the scripts via btcdeb, we confirmed the security of stack-based validation and quantified the efficiency gains provided by SegWit's restructured data format.
 
